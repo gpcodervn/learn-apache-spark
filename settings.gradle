@@ -1,0 +1,5 @@
+rootProject.name = 'learn-apache-spark'
+include 'apache-spark-rdd-demo'
+include 'apache-spark-sql-demo'
+include 'apache-spark-streaming-demo'
+
