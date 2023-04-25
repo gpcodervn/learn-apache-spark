@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'org.gpcoder'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.apache.spark:spark-core_2.13:3.3.2'
+    implementation 'org.apache.hadoop:hadoop-hdfs:3.3.5'
+
+    // Kafka Streaming
+    implementation 'org.apache.spark:spark-streaming_2.13:3.3.2'
+    implementation 'org.apache.spark:spark-streaming-kafka-0-10_2.13:3.4.0'
+
+    // Structured Streaming
+    implementation 'org.apache.spark:spark-sql-kafka-0-10_2.13:3.4.0'
+    implementation 'org.apache.spark:spark-sql_2.13:3.3.2'
+
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
